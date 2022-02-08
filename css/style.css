@@ -1,0 +1,336 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 60%;
+}
+/* global variable */
+:root{
+    --box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    --btn-bg: #00aaee ;
+    --primary-bg: #002387;
+    --footer-bg: #002D5F;
+}
+a{
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+}
+.xflex{
+    display: flex;
+}
+/* banner style */
+.banner{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--primary-bg);
+    padding: 60px 0 ;
+    margin-bottom: 30px;
+    height: 100vh;
+}
+
+.banner:hover span{
+    font-size: 3.5rem;
+    color: #3CD070;
+
+}
+.banner:hover img{
+    transform:scale(.8);
+}
+.banner-title h1{
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: white;
+    line-height: 1.2em;
+}
+.banner-title span{
+    transition: 0.5s;
+}
+.banner-title .banner-title-button{
+    margin: 20px 0;
+    background-color: var(--btn-bg);
+    border-radius: 10px;
+    line-height: 40px;
+    height: 40px;
+    width: 120px;
+    transition: 0.3s;
+    
+}
+.banner-title-button:hover {
+    background-color: #3CD070;
+}
+
+.button-inner p{
+    margin: 0;
+}
+.banner-title .button-inner{
+    align-items: center;
+    justify-content: space-around;
+}
+.button-inner i{
+    margin-top: 3px;
+}
+.banner .banner-img{
+    background-image:url(/images/top-small-bg.png);
+    border-radius: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 400px;
+}
+.banner .banner-img img{
+    transition: 0.5s ease-out;
+    transition-delay: 0.3s;
+    width: 100%;
+}
+.effect{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px solid red;
+    bottom: 40px;
+    left: 22%;
+    animation: rotate 6s linear infinite;
+    transition: 0.4s;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+        
+    }
+    50%{
+        border-color: green;
+    }
+    100%{
+        transform: rotate(360deg);
+        border-color: goldenrod;
+    }
+}
+.banner:hover .effect{
+
+    left: 60%;
+}
+
+
+/* character lists */
+.character-list{
+    display: flex;
+    justify-content: center;
+}
+.character-list .characters{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-content: inherit;
+    margin: 30px 0;
+   
+}
+.characters .character{
+    padding: 25px 15px;
+    width: 330px;
+    margin: 15px 5px;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+.character{
+    border-radius: 10px;
+}
+.character:hover h3{
+    color: var(--btn-bg);
+    font-size: 20px;
+    
+}
+.character h3{
+    margin: 10px 0;
+    transition: 0.2s;
+}
+.character p{
+    margin: 0;
+    line-height: 23px;
+    padding-bottom: 20px;
+    color: grey;
+}
+.character img{
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+
+/* news section */
+.news{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+.news .single-news{
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+    margin: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.news h4,h3,p{
+    margin-left: 10px;
+}
+.news h3{
+    color: var(--primary-bg);
+}
+.news h4{
+    color: var(--btn-bg);
+    text-align: center;
+}
+.news p{
+    
+    margin-top: 5px;
+    color: grey;
+}
+.news img{
+    margin: 15px 0;
+    border-radius: 15px;
+    height: 251px;
+    width: 620px;
+}
+
+
+
+/* jollyroger area */
+.jollyrogers{
+    margin-top: 60px;
+}
+.jollyrogers h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--btn-bg);
+    margin: 40px 0;
+    text-transform: uppercase;
+}
+.jollyroger{
+    margin: 40px ;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    
+}
+.jollyroger img{
+    width: 250px;
+    margin: 10px 10px;
+}
+
+
+
+/* footer */
+
+.footer{
+    /* margin-top: 40px; */
+    padding: 60px 0  40px;
+   display: flex;
+   justify-content: center;
+   background-color: var(--footer-bg);
+}
+
+.footer-img{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.footer-img img{
+    width: 50%;
+}
+
+.footer .social-icons{
+    text-align: center;
+    margin: 30px 0 15px ;
+    
+}
+ .footer .social-icons a{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0px 7px;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color:rgb(211, 210, 210);
+    color: black;
+}
+/* ----------------------new------------------------ */
+/* ----------------------new---------------------- */
+.footer p{
+    text-align: center;
+    color:white;
+    font-weight: 600;
+}
+
+
+
+/*_______________________________
+            Media Quary         
+____________________________________*/
+
+        /* Tab */
+@media screen and  (max-width: 992px){
+
+    .character-list .characters{
+        grid-template-columns: repeat(2,1fr);
+        place-content: inherit;
+    }
+    .banner{
+        padding: 60px 20px;
+        height: 90vh;
+    }
+    .banner-title h1{
+        font-size: 2rem;
+    }
+    .banner .banner-img{
+    width: 400px;
+    height: 300px;
+}
+}
+
+    /* Mobile */
+@media screen and  (max-width: 600px){
+
+    .character-list .characters{
+        grid-template-columns: repeat(1,1fr);
+        place-content: inherit;
+    }
+    .character{
+        text-align: center;
+    }
+    .banner{
+        display: block;
+        padding: 60px 20px;
+        height: 70vh;
+    }
+    .banner .banner-img{
+        margin: 30px auto;
+        width: 300px;
+        height: 200px;
+    }
+    .jollyrogers h2{
+        font-size: 1.5rem;
+    }
+    .news img{
+        margin: 15px 0;
+        width: 100%;
+        border-radius: 15px;
+    }
+    .effect{
+        width: 30px;
+        height: 30px;
+    }
+}
